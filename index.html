@@ -74,8 +74,8 @@
 
     let progress = 0;
     const progressBar = document.getElementById("progressBar");
-    const duration = 15000; // 15 detik
-    const interval = 150; // update setiap 150ms
+    const duration = 15000;
+    const interval = 150; 
     const step = 100 / (duration / interval);
 
     const timer = setInterval(() => {
@@ -83,8 +83,7 @@
       if (progress >= 100) {
         progress = 100;
         clearInterval(timer);
-        // setelah selesai, redirect ke Home.html
-        window.location.href = "Home.Html";
+        window.location.href = "Home.html";
       }
       progressBar.style.width = progress + "%";
       progressBar.innerText = Math.floor(progress) + "%";
